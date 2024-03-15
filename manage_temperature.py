@@ -38,18 +38,18 @@ while True:
     print("Circuitry temp: " + str(circuit_temp))
 
     # If Temperature >= 75, turn on fans
-    if ambient_temp >= 75:
+    if ambient_temp >= 75 and circuit_temp <= 130:
         relay_pin.value = True
         print('Fan relay activated...')
 
     # If Temperature <= 70, turn off fans
-    if ambient_temp <= 70:
+    if ambient_temp <= 70 or circuit_temp > 130:
         relay_pin.value = False
         print('Fan relay deactivated...')    
 
-    # How do we want to control the circuitry temp? what are the limits? 
-    # Possibly 130F as an upper before cuttoff?
-    # TODO: Add controls for project box temp
+    # In addition to cutting off, hold off for 5 minutes
+    if circuit_temp > 130:
+        time.sleep(5 * 60)
 
     # Wait 1 minutes
-    time.sleep(3)
+    time.sleep(60)
