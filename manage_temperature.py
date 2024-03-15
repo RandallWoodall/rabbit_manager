@@ -47,5 +47,9 @@ while True:
         relay_pin.value = False
         print('Fan relay deactivated...')    
 
+    # How do we want to control the circuitry temp? what are the limits? 
+    # Possibly 130F as an upper before cuttoff?
+    # TODO: Add controls for project box temp
+
     # Wait 1 minutes
     time.sleep(3)
