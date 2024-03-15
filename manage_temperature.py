@@ -2,11 +2,14 @@
 import time
 import board
 import busio
+import digitalio
 import adafruit_ads1x15.ads1015 as ADS
 from adafruit_ads1x15.analog_in import AnalogIn
 
 # Tune to be adjusted.  Probably individual sensor specific.
-TUNE = 8
+# For a V2, possibly use tuning knobs?
+TUNE = 7
+TUNE2 = 4
 
 # Create the I2C bus
 i2c = busio.I2C(board.SCL, board.SDA)
@@ -16,24 +19,37 @@ ads = ADS.ADS1015(i2c)
 
 # Create single-ended input on channel 0
 chan = AnalogIn(ads, ADS.P0)
+chan2 = AnalogIn(ads, ADS.P1)
 
-# Create differential input between channel 0 and 1
-#chan = AnalogIn(ads, ADS.P0, ADS.P1)
+# Grab a pin for controlling relay
+relay_pin = digitalio.DigitalInOut(board.D17)
+relay_pin.direction = digitalio.Direction.OUTPUT
+relay_pin.value = False
 
 # Do until the end of time:
 while True:
     # Check the temperature
-    rough_temp = ((chan.voltage - .1) * 100 - 40) * 9 / 5 + 32 + TUNE
-
-    # If Temperature >= 75, turn on fans
-    # TODO: Implement turn on relay
-
-    # If Temperature <= 70, turn off fans
-    # TODO: Implement turn off relay
+    ambient_temp = ((chan.voltage - .1) * 100 - 40) * 9 / 5 + 32 + TUNE
+    circuit_temp = ((chan2.voltage - .1) * 100 - 40) * 9 / 5 + 32 + TUNE2
 
     # Print info
-    print("I live!")
-    print(rough_temp)
+    print(time.localtime())
+    print("Ambient Temp: " + str(ambient_temp))
+    print("Circuitry temp: " + str(circuit_temp))
+
+    # If Temperature >= 75, turn on fans
+    if ambient_temp >= 75:
+        relay_pin.value = True
+        print('Fan relay activated...')
+
+    # If Temperature <= 70, turn off fans
+    if ambient_temp <= 70:
+        relay_pin.value = False
+        print('Fan relay deactivated...')    
+
+    # How do we want to control the circuitry temp? what are the limits? 
+    # Possibly 130F as an upper before cuttoff?
+    # TODO: Add controls for project box temp
 
     # Wait 1 minutes
-    time.sleep(60)
+    time.sleep(3)
