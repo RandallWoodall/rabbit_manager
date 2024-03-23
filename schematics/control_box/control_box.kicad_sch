@@ -5,7 +5,142 @@
 	(uuid "3ae0053d-206d-4787-aced-ee74b4da0e02")
 	(paper "A4")
 	(lib_symbols
-		(symbol "rjwooda:Raspberry_Pi_4B"
+		(symbol "project_schematics:120V_to_5V_Buck_Converter"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "A"
+				(at -1.27 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "120V to 5V Buck Converter"
+				(at 0 4.064 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "120V_to_5V_Buck_Converter_0_1"
+				(rectangle
+					(start -11.43 2.54)
+					(end 11.43 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "120V_to_5V_Buck_Converter_1_1"
+				(pin input line
+					(at -13.97 1.27 0)
+					(length 2.54)
+					(name "120V_AC_Hot"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -13.97 -1.27 0)
+					(length 2.54)
+					(name "120V_AC_N"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 13.97 1.27 180)
+					(length 2.54)
+					(name "5V_DC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 13.97 -1.27 180)
+					(length 2.54)
+					(name "DC_GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "project_schematics:Raspberry_Pi_4B"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -789,26 +924,66 @@
 			)
 		)
 	)
+	(wire
+		(pts
+			(xy 92.71 30.48) (xy 92.71 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22b08079-cfeb-4ea1-bd3e-eaefe5cc302d")
+	)
+	(wire
+		(pts
+			(xy 92.71 39.37) (xy 64.77 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2da7397b-c9d4-4a8e-97a0-8e36944220bc")
+	)
+	(wire
+		(pts
+			(xy 92.71 24.13) (xy 64.77 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d8000f9-b048-4d4c-9139-4ce98e2f2b23")
+	)
+	(wire
+		(pts
+			(xy 92.71 33.02) (xy 92.71 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a40e24a7-a0d4-4353-a33d-13bc9dc45cd2")
+	)
 	(symbol
-		(lib_id "rjwooda:Raspberry_Pi_4B")
-		(at 86.36 96.52 0)
+		(lib_id "project_schematics:120V_to_5V_Buck_Converter")
+		(at 106.68 31.75 0)
+		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "875cd05e-b5ec-4551-a1d5-a8e314feac89")
-		(property "Reference" "A1"
-			(at 86.995 67.31 0)
+		(uuid "1c32bc9c-280e-4fba-a92c-d4d752c6f7d4")
+		(property "Reference" "A2"
+			(at 106.68 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "Raspberry Pi 4B"
-			(at 86.995 69.85 0)
+		(property "Value" "120V to 5V Buck Converter"
+			(at 106.68 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -816,7 +991,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 81.28 69.85 0)
+			(at 106.68 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -825,7 +1000,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 81.28 69.85 0)
+			(at 106.68 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -834,7 +1009,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 81.28 69.85 0)
+			(at 106.68 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -842,125 +1017,199 @@
 				(hide yes)
 			)
 		)
-		(pin "13"
-			(uuid "687d5614-5fe4-4edc-8792-6105d16bc433")
+		(pin ""
+			(uuid "5fec0390-9efb-466d-8fe8-b70a5125b20c")
 		)
-		(pin "21"
-			(uuid "20e165ce-07ef-402b-a683-2330f67851b9")
+		(pin ""
+			(uuid "46dc8033-fd5f-4336-a222-7105f9446473")
 		)
-		(pin "23"
-			(uuid "817a6530-5044-4833-803a-b83c14296b36")
+		(pin ""
+			(uuid "4e4208db-eb88-41f3-916b-44cd1782412b")
 		)
-		(pin "18"
-			(uuid "fdc70150-cff3-4900-92b4-31fa832c59bd")
+		(pin ""
+			(uuid "cc04fa23-ddac-4818-8945-8b6b1aad5841")
 		)
-		(pin "26"
-			(uuid "c3ada21a-4188-4470-98f4-8b13cc8f9588")
+		(instances
+			(project "control_box"
+				(path "/3ae0053d-206d-4787-aced-ee74b4da0e02"
+					(reference "A2")
+					(unit 1)
+				)
+			)
 		)
-		(pin "28"
-			(uuid "2965fbc5-bd9e-4855-ab07-5872786ac2ef")
+	)
+	(symbol
+		(lib_id "project_schematics:Raspberry_Pi_4B")
+		(at 45.72 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "394cca7f-3ce1-48db-9918-2e38d4b2b9ce")
+		(property "Reference" "A1"
+			(at 46.355 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(pin "10"
-			(uuid "33ce864d-ddf6-441b-abb1-6be9fa97ab34")
+		(property "Value" "Raspberry Pi 4B"
+			(at 46.355 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
 		)
-		(pin "29"
-			(uuid "a9b9fc98-56ad-4f63-accd-c92ff8a2c0f9")
+		(property "Footprint" ""
+			(at 40.64 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
-		(pin "1"
-			(uuid "f8a718dd-0b52-4823-bb8a-0273e10a0e78")
+		(property "Datasheet" ""
+			(at 40.64 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
-		(pin "12"
-			(uuid "18f852c6-a3a0-41cf-8d32-44c7754cc5fa")
-		)
-		(pin "2"
-			(uuid "bd637c30-ed48-4a0e-bbc0-2d81eaf6b27a")
-		)
-		(pin "11"
-			(uuid "2cec80f0-0f4b-4f3d-9129-4ea632f28bc3")
-		)
-		(pin "15"
-			(uuid "7eab2203-d150-41a8-a685-7ada4e58b9cf")
-		)
-		(pin "17"
-			(uuid "f8ebc400-52c5-428e-ac83-db3a788be480")
-		)
-		(pin "20"
-			(uuid "81d6e886-cc50-433d-a954-906d85db00c7")
-		)
-		(pin "22"
-			(uuid "f9d7b07a-65ed-41a9-a649-9c7bf37cb6e1")
-		)
-		(pin "27"
-			(uuid "f4cf465b-e2d1-47f6-a52e-5b3c23bb2b6c")
-		)
-		(pin "24"
-			(uuid "e11c3ffc-4534-4e4f-8743-1d2e53ccce07")
-		)
-		(pin "14"
-			(uuid "8f8cd458-a551-4d46-94b4-bc1978d7350c")
-		)
-		(pin "16"
-			(uuid "53818eeb-9c21-419d-b8fa-4fc915a54b99")
-		)
-		(pin "19"
-			(uuid "667ee74b-e399-41ad-9b91-6bd2f0a4567e")
+		(property "Description" ""
+			(at 40.64 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(pin "25"
-			(uuid "eeea7df1-8b0a-4ede-a2f7-2ea29d373f8c")
+			(uuid "4714ccb3-e4a9-4b26-8c60-c04e6a0dfc2d")
 		)
-		(pin "33"
-			(uuid "ef9a67b8-729f-4d75-b871-9d71974dd6db")
+		(pin "28"
+			(uuid "430d269f-2c4a-48f9-81a2-87314feec02e")
 		)
-		(pin "7"
-			(uuid "e289b845-c9e9-4979-9f82-9008c71ce570")
+		(pin "20"
+			(uuid "1fb32955-a926-4f75-92d4-bec2b2a3cf3c")
 		)
-		(pin "40"
-			(uuid "11931adf-323d-41f6-bebe-a0fdc8e86ee0")
+		(pin "11"
+			(uuid "4e9f1781-e75b-4d73-9ea7-563108617446")
 		)
-		(pin "8"
-			(uuid "89566f8d-6963-43d6-807c-f1315957b871")
+		(pin "17"
+			(uuid "9ef16526-9ded-415b-a830-aa2d31d81f0b")
 		)
-		(pin "4"
-			(uuid "ee443f11-769d-40b0-beb5-09d899cda360")
+		(pin "2"
+			(uuid "5f1af6d2-69ca-4dd9-bd19-e9f7e52f4ada")
 		)
-		(pin "30"
-			(uuid "ced99bf3-04d1-458d-880b-7422dafb51f6")
+		(pin "27"
+			(uuid "c77df390-94a5-4e3d-862e-279593f02dc3")
+		)
+		(pin "29"
+			(uuid "ef3813ee-858d-4362-b79a-c8c38d4e6e62")
 		)
 		(pin "3"
-			(uuid "5a51e259-2fa8-410b-a456-9a7facfa47c4")
+			(uuid "8b57938b-60b4-4724-afc3-5cd5029f864f")
 		)
-		(pin "36"
-			(uuid "ae805561-6541-4a18-b077-e09f7eab4274")
+		(pin "21"
+			(uuid "b6471459-cc00-4411-b02b-e317ab8f6edd")
 		)
-		(pin "35"
-			(uuid "3a066f88-2658-4f03-9564-6620d418ff2d")
+		(pin "30"
+			(uuid "2ad511d9-cfba-4b53-a7c9-549422412ace")
 		)
-		(pin "34"
-			(uuid "f47e4f4d-9c19-47a5-86b4-30c1d104d505")
+		(pin "26"
+			(uuid "369fe77b-f5e8-4a20-854c-94df75158bbb")
 		)
-		(pin "5"
-			(uuid "3a547bfc-6ede-4a5f-94b5-fbb6903bac8c")
+		(pin "14"
+			(uuid "a4130db3-0be8-4dbe-bc80-84b6eecd9c52")
 		)
-		(pin "6"
-			(uuid "f1b69816-316a-403a-a7cf-da878a2a9a5f")
+		(pin "18"
+			(uuid "7ed2d6fb-1b9a-4864-885f-44010c46cf93")
 		)
-		(pin "32"
-			(uuid "807f60e5-5925-4a04-9a55-b797a0d09a82")
+		(pin "1"
+			(uuid "736fc3f0-07d5-4ed3-b162-572f35c06d2d")
 		)
-		(pin "31"
-			(uuid "c9288fd3-3527-4a64-b817-0991c8c692b1")
+		(pin "10"
+			(uuid "effaec8b-aef7-4aa4-8329-efc7189fe78d")
 		)
-		(pin "9"
-			(uuid "2099954a-7905-4dae-8b14-638359eb548c")
+		(pin "12"
+			(uuid "7177bf39-0ba4-4d73-92d8-1a5529117138")
+		)
+		(pin "13"
+			(uuid "13d31807-1763-4f8e-92c2-6170ade98619")
+		)
+		(pin "15"
+			(uuid "4f2e7ea9-cf46-4d62-956a-33a458b710bb")
+		)
+		(pin "19"
+			(uuid "bde73541-31ab-4657-9321-b38435771225")
+		)
+		(pin "22"
+			(uuid "a3edcb96-39e2-44ea-a599-6bead96e7bce")
+		)
+		(pin "23"
+			(uuid "404a9803-4230-4425-bb23-bf385a72e323")
+		)
+		(pin "16"
+			(uuid "6bb0cae7-7575-447f-8b1b-27ef304f989c")
+		)
+		(pin "24"
+			(uuid "b917e95d-b91a-4f60-b288-62820d0fef72")
 		)
 		(pin "38"
-			(uuid "44585ca2-9a65-47cd-86f0-3e1419c21c79")
+			(uuid "3d12be83-e536-40bf-bf19-7f0b7b109802")
 		)
-		(pin "37"
-			(uuid "d93cc62d-5594-490a-883d-46f935acf466")
+		(pin "7"
+			(uuid "c119e049-97a5-4fa5-84d1-7ab5c3601ea6")
+		)
+		(pin "6"
+			(uuid "cea118b4-afca-4ff6-9a66-abeacb0a63fb")
+		)
+		(pin "36"
+			(uuid "f2bae47b-443f-4420-a4f4-92eb3b06ca6f")
+		)
+		(pin "34"
+			(uuid "6a08050e-a46e-4d16-872d-b57e66183027")
+		)
+		(pin "35"
+			(uuid "a07a1dad-8c6f-49e0-8897-4f03ce69807e")
+		)
+		(pin "8"
+			(uuid "62b562d4-1620-4039-9996-2b4b574d69d1")
 		)
 		(pin "39"
-			(uuid "a07fcf9f-3eca-4928-aa87-ffe6e51b1c3c")
+			(uuid "fca4cddd-25b2-4acd-bb7a-8bbe5781eecb")
+		)
+		(pin "37"
+			(uuid "c0de5ff1-4e95-4262-bf07-48dc706f6b49")
+		)
+		(pin "9"
+			(uuid "846606e4-dcb1-4712-b47e-c044d7e76975")
+		)
+		(pin "5"
+			(uuid "05f87b62-69cd-4a17-84ee-e232a461c53f")
+		)
+		(pin "32"
+			(uuid "727708d7-0e49-4156-bea5-5e87c353b88c")
+		)
+		(pin "40"
+			(uuid "f03e7e65-f74d-4023-9d2c-3338b5186e58")
+		)
+		(pin "4"
+			(uuid "304bf41b-4552-4a1a-bd91-c6393246ca1e")
+		)
+		(pin "31"
+			(uuid "173d49af-5c82-4699-81b3-b31c6b88f515")
+		)
+		(pin "33"
+			(uuid "59e089b6-3392-4de3-863f-2a743d0300df")
 		)
 		(instances
 			(project "control_box"
