@@ -11,3 +11,6 @@ Manage fans for rabbit hutches.
 8. sudo python3 raspi-blinka.py
 
 run the manager
+
+Alternatively, the manager can be set up to run on boot by using a crontab job:
+@reboot /usr/bin/python3 -u /path/to/repository/rabbit_manager/manage_temperature.py > /path/to/logs/test.out 2>&1
