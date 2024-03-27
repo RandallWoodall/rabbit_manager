@@ -236,7 +236,10 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "power",
+      "project_schematics"
+    ]
   },
   "meta": {
     "filename": "control_box.kicad_pro",
